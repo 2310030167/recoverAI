@@ -43,14 +43,26 @@ export const App: React.FC = () => {
   const loadBackendData = async () => {
     setIsLoading(true);
     try {
-      const opps = await api.getOpportunities(100, 42);
-      setOpportunities(opps);
-      if (opps.length > 0) {
-        setSelectedOpp(opps[0]);
+      const [oppsResult, batchResult] = await Promise.allSettled([
+        api.getOpportunities(100, 42),
+        api.runBatchSimulation(100, 42),
+      ]);
+
+      if (oppsResult.status === 'fulfilled') {
+        const opps = oppsResult.value;
+        setOpportunities(opps);
+        if (opps.length > 0) {
+          setSelectedOpp(opps[0]);
+        }
+      } else {
+        console.error('Failed to load opportunities:', oppsResult.reason);
       }
 
-      const batch = await api.runBatchSimulation(100, 42);
-      setBatchResult(batch);
+      if (batchResult.status === 'fulfilled') {
+        setBatchResult(batchResult.value);
+      } else {
+        console.error('Failed to run batch simulation:', batchResult.reason);
+      }
     } catch (err) {
       console.error('Failed to load backend data:', err);
     } finally {
@@ -161,7 +173,7 @@ export const App: React.FC = () => {
               <div className="text-sm font-semibold text-slate-300">
                 Loading RecoverAI Backend Data...
               </div>
-              <p className="text-xs text-slate-500">Connecting to FastAPI on port 8000</p>
+              <p className="text-xs text-slate-500">Loading live recovery intelligence...</p>
             </div>
           ) : (
             <>
