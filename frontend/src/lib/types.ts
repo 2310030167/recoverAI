@@ -103,6 +103,38 @@ export interface TimelineEvent {
   metadata: Record<string, any>;
 }
 
+export interface AuditEvent {
+  id: string;
+  opportunity_id: string;
+  event_type: string;
+  actor: string;
+  details: string;
+  timestamp: string;
+}
+
+export interface PolicyRule {
+  id: string;
+  name: string;
+  category: string;
+  description: string;
+  threshold: string;
+  status: string;
+}
+
+export interface PolicyGuardrailsConfig {
+  source: string;
+  parameter_ref: string;
+  thresholds: {
+    cooldown_hours: number;
+    max_retry_attempts: number;
+    max_interventions: number;
+    min_expected_value: number;
+    escalation_amount_threshold: number;
+    escalation_days_overdue: number;
+  };
+  rules: PolicyRule[];
+}
+
 export interface SyncPaymentResponse {
   success: boolean;
   opportunity_id: string;

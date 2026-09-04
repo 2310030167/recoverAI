@@ -178,6 +178,24 @@ class ExecutionResultProcessor:
         """Fetch audit events for opportunity."""
         return self.audit_store.get(opportunity_id, [])
 
+    def get_all_audit_events(self) -> List[Dict[str, Any]]:
+        """
+        Fetch all portfolio-level audit events across all opportunities,
+        sorted chronologically by timestamp (newest first).
+        """
+        all_events: List[Dict[str, Any]] = []
+        for events in self.audit_store.values():
+            all_events.extend(events)
+
+        def parse_ts(item):
+            ts = item.get("timestamp")
+            if hasattr(ts, "isoformat"):
+                return ts.isoformat()
+            return str(ts or "")
+
+        all_events.sort(key=parse_ts, reverse=True)
+        return all_events
+
     def update_payment_settlement(
         self,
         record: ExecutionRecordSchema,

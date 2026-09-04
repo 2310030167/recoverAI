@@ -3,13 +3,14 @@ import {
   LayoutDashboard,
   Compass,
   Layers,
+  ShieldCheck,
   Zap,
   BarChart3,
   History,
   FileText
 } from 'lucide-react';
 
-export type NavTab = 'OVERVIEW' | 'RECOVERY' | 'OPPORTUNITIES' | 'EXECUTIONS' | 'ANALYTICS' | 'AUDIT';
+export type NavTab = 'OVERVIEW' | 'RECOVERY' | 'OPPORTUNITIES' | 'POLICY' | 'EXECUTIONS' | 'ANALYTICS' | 'AUDIT';
 
 interface SidebarProps {
   activeTab: NavTab;
@@ -29,6 +30,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange, opport
     { id: 'OVERVIEW', label: 'Overview', icon: LayoutDashboard },
     { id: 'RECOVERY', label: 'Recovery Horizon', icon: Compass },
     { id: 'OPPORTUNITIES', label: 'Opportunities', icon: Layers, badge: opportunityCount },
+    { id: 'POLICY', label: 'Policy & Guardrails', icon: ShieldCheck },
     { id: 'EXECUTIONS', label: 'Executions', icon: Zap },
     { id: 'ANALYTICS', label: 'Analytics', icon: BarChart3 },
     { id: 'AUDIT', label: 'Audit Log', icon: History },

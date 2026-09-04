@@ -100,4 +100,10 @@ export const api = {
     fetchJSON<import('./types').SyncPaymentResponse>(`/opportunities/${opportunity_id}/sync-payment`, {
       method: 'POST',
     }),
+
+  getGlobalAuditEvents: () =>
+    fetchJSON<import('./types').AuditEvent[]>('/audit/events'),
+
+  getPolicyGuardrails: () =>
+    fetchJSON<import('./types').PolicyGuardrailsConfig>('/audit/policy'),
 };

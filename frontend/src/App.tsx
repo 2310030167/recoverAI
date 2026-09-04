@@ -11,6 +11,7 @@ import { OpportunityDetailModal } from './components/opportunities/OpportunityDe
 import { ExecutionLogTable } from './components/executions/ExecutionLogTable';
 import { AuditEventTimeline } from './components/audit/AuditEventTimeline';
 import { AnalyticsDashboard } from './components/analytics/AnalyticsDashboard';
+import { PolicyGuardrailsView } from './components/policy/PolicyGuardrailsView';
 
 import {
   RecoveryOpportunity,
@@ -18,6 +19,8 @@ import {
   BatchSimulationResult,
   ExecutionRecord,
   TimelineEvent,
+  AuditEvent,
+  PolicyGuardrailsConfig,
   ActionType
 } from './lib/types';
 import { api } from './lib/api';
@@ -30,6 +33,8 @@ export const App: React.FC = () => {
   const [batchResult, setBatchResult] = useState<BatchSimulationResult | null>(null);
   const [executions, setExecutions] = useState<ExecutionRecord[]>([]);
   const [timeline, setTimeline] = useState<TimelineEvent[]>([]);
+  const [globalAuditEvents, setGlobalAuditEvents] = useState<AuditEvent[]>([]);
+  const [policyConfig, setPolicyConfig] = useState<PolicyGuardrailsConfig | null>(null);
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isExecuting, setIsExecuting] = useState<boolean>(false);
@@ -43,15 +48,21 @@ export const App: React.FC = () => {
   const loadBackendData = async () => {
     setIsLoading(true);
 
-    // Launch batch simulation independently in background without blocking primary UI
+    // Launch batch simulation, global audit events, and policy config in background
     api
       .runBatchSimulation(100, 42)
-      .then((batch) => {
-        setBatchResult(batch);
-      })
-      .catch((err) => {
-        console.error('Failed to run batch simulation:', err);
-      });
+      .then((batch) => setBatchResult(batch))
+      .catch((err) => console.error('Failed to run batch simulation:', err));
+
+    api
+      .getGlobalAuditEvents()
+      .then((events) => setGlobalAuditEvents(events))
+      .catch((err) => console.error('Failed to fetch global audit events:', err));
+
+    api
+      .getPolicyGuardrails()
+      .then((config) => setPolicyConfig(config))
+      .catch((err) => console.error('Failed to fetch policy guardrails:', err));
 
     // Primary opportunities fetch controls dashboard isLoading state
     try {
@@ -103,6 +114,7 @@ export const App: React.FC = () => {
       setExecutions((prev) => [record, ...prev]);
       const updatedTimeline = await api.getTimeline(selectedOpp.opportunity_id);
       setTimeline(updatedTimeline);
+      api.getGlobalAuditEvents().then((ev) => setGlobalAuditEvents(ev)).catch(() => {});
 
       if (record.metadata?.payment_link_url) {
         const linkUrl = record.metadata.payment_link_url;
@@ -131,6 +143,7 @@ export const App: React.FC = () => {
       }
       const updatedTimeline = await api.getTimeline(oppId);
       setTimeline(updatedTimeline);
+      api.getGlobalAuditEvents().then((ev) => setGlobalAuditEvents(ev)).catch(() => {});
       const updatedOpps = await api.getOpportunities(100, 42);
       setOpportunities(updatedOpps);
     } catch (err: any) {
@@ -144,6 +157,7 @@ export const App: React.FC = () => {
       await api.resetTestProvider();
       setExecutions([]);
       setTimeline([]);
+      setGlobalAuditEvents([]);
       alert('Test Mode Provider & Execution Engine state reset successfully.');
     } catch (err) {
       console.error('Error resetting test provider:', err);
@@ -212,6 +226,10 @@ export const App: React.FC = () => {
                 </div>
               )}
 
+              {activeTab === 'POLICY' && (
+                <PolicyGuardrailsView config={policyConfig} />
+              )}
+
               {activeTab === 'EXECUTIONS' && (
                 <ExecutionLogTable executions={executions} />
               )}
@@ -221,7 +239,7 @@ export const App: React.FC = () => {
               )}
 
               {activeTab === 'AUDIT' && (
-                <AuditEventTimeline timeline={timeline} />
+                <AuditEventTimeline timeline={globalAuditEvents.length > 0 ? globalAuditEvents : timeline} />
               )}
             </>
           )}
