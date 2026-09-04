@@ -11,6 +11,8 @@ dist/
 node_modules/
 data/raw/synthetic_fraud_data.csv
 *.csv.gz
+AGENT_RULES.md
+ROADMAP.md
 downloads/
 eggs/
 .eggs/
