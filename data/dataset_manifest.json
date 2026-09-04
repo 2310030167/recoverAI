@@ -1,0 +1,3765 @@
+{
+  "Customer Invoices Dataset.csv": {
+    "filename": "Customer Invoices Dataset.csv",
+    "file_type": ".csv",
+    "file_size_bytes": 7790548,
+    "file_size_mb": 7.43,
+    "total_rows": 50000,
+    "max_cols": 19,
+    "number_of_sheets": 1,
+    "provenance": "REAL",
+    "recoverai_roles": [
+      "RECEIVABLES",
+      "PAYMENT_BEHAVIOR"
+    ],
+    "importance_tier": "CORE",
+    "recommendation_ranking": "PRIMARY DATASET (SAP B2B Invoice Collection & Delay)",
+    "sheets": {
+      "default": {
+        "num_rows": 50000,
+        "num_cols": 19,
+        "duplicate_rows": 1161,
+        "columns": {
+          "business_code": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 6,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 6,
+              "top_10": {
+                "U001": 45359,
+                "CA02": 3917,
+                "U013": 573,
+                "U002": 135,
+                "U005": 11,
+                "U007": 5
+              }
+            }
+          },
+          "cust_number": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 1425,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 1425,
+              "top_10": {
+                "0200769623": 11483,
+                "0200726979": 1885,
+                "0200762301": 1557,
+                "0200759878": 1395,
+                "0200794332": 1142,
+                "0200744019": 1091,
+                "0200772670": 889,
+                "0200705742": 793,
+                "200769623": 785,
+                "0200707822": 690
+              }
+            }
+          },
+          "name_customer": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 4197,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 4197,
+              "top_10": {
+                "WAL-MAR trust": 1179,
+                "WAL-MAR in": 1150,
+                "WAL-MAR corp": 1136,
+                "WAL-MAR ": 1135,
+                "WAL-MAR llc": 1123,
+                "WAL-MAR co": 1122,
+                "WAL-MAR associates": 1093,
+                "WAL-MAR foundation": 1092,
+                "WAL-MAR corporation": 1092,
+                "WAL-MAR systems": 1082
+              }
+            }
+          },
+          "clear_date": {
+            "dtype": "str",
+            "inferred_type": "datetime",
+            "missing_count": 10000,
+            "missing_pct": 20.0,
+            "unique_count": 404,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "2019-01-03 00:00:00",
+              "max": "2020-05-22 00:00:00",
+              "coverage": "505 days 00:00:00"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "buisness_year": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 2019.0,
+              "max": 2020.0,
+              "mean": 2019.3057,
+              "median": 2019.0,
+              "std": 0.46070788471123514,
+              "p1": 2019.0,
+              "p99": 2020.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "doc_id": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 48839,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1928501756.0,
+              "max": 9500000133.0,
+              "mean": 2012238145.97236,
+              "median": 1929963919.5,
+              "std": 288523548.9065789,
+              "p1": 1928576687.63,
+              "p99": 2960621970.06,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "posting_date": {
+            "dtype": "str",
+            "inferred_type": "datetime",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 506,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "2018-12-30 00:00:00",
+              "max": "2020-05-22 00:00:00",
+              "coverage": "509 days 00:00:00"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "document_create_date": {
+            "dtype": "int64",
+            "inferred_type": "datetime",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 507,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "1970-01-01 00:00:00.020181226",
+              "max": "1970-01-01 00:00:00.020200522",
+              "coverage": "0 days 00:00:00.000019296"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "document_create_date.1": {
+            "dtype": "int64",
+            "inferred_type": "datetime",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 506,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "1970-01-01 00:00:00.020181230",
+              "max": "1970-01-01 00:00:00.020200522",
+              "coverage": "0 days 00:00:00.000019292"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "due_in_date": {
+            "dtype": "float64",
+            "inferred_type": "monetary",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 547,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 20181224.0,
+              "max": 20200710.0,
+              "mean": 20193679.29496,
+              "median": 20190926.0,
+              "std": 4470.613998804764,
+              "p1": 20190121.0,
+              "p99": 20200522.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "invoice_currency": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 2,
+              "top_10": {
+                "USD": 46081,
+                "CAD": 3919
+              }
+            }
+          },
+          "document type": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 2,
+              "top_10": {
+                "RV": 49994,
+                "X2": 6
+              }
+            }
+          },
+          "posting_id": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 1,
+            "is_constant": true,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1.0,
+              "max": 1.0,
+              "mean": 1.0,
+              "median": 1.0,
+              "std": 0.0,
+              "p1": 1.0,
+              "p99": 1.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "area_business": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 50000,
+            "missing_pct": 100.0,
+            "unique_count": 1,
+            "is_constant": true,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": null,
+              "max": null,
+              "mean": null,
+              "median": null,
+              "std": null,
+              "p1": null,
+              "p99": null,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "total_open_amount": {
+            "dtype": "float64",
+            "inferred_type": "monetary",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 44349,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.72,
+              "max": 668593.36,
+              "mean": 32337.0216512,
+              "median": 17609.010000000002,
+              "std": 39205.97523091704,
+              "p1": 70.7984,
+              "p99": 163871.72440000006,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "baseline_create_date": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 506,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 20181214.0,
+              "max": 20200522.0,
+              "mean": 20193539.9285,
+              "median": 20190909.0,
+              "std": 4482.701431702792,
+              "p1": 20190105.0,
+              "p99": 20200505.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "cust_payment_terms": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 74,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 74,
+              "top_10": {
+                "NAA8": 20118,
+                "NAH4": 13585,
+                "CA10": 3800,
+                "NAC6": 1743,
+                "NAM4": 1385,
+                "NAAX": 1208,
+                "NAD1": 927,
+                "NAU5": 912,
+                "NAGD": 906,
+                "NAG2": 808
+              }
+            }
+          },
+          "invoice_id": {
+            "dtype": "float64",
+            "inferred_type": "monetary",
+            "missing_count": 6,
+            "missing_pct": 0.012,
+            "unique_count": 48834,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1928501756.0,
+              "max": 2960635652.0,
+              "mean": 2011339506.7013042,
+              "median": 1929963780.5,
+              "std": 276633494.1151056,
+              "p1": 1928576679.41,
+              "p99": 2960621932.89,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "isOpen": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 1.0,
+              "mean": 0.2,
+              "median": 0.0,
+              "std": 0.40000400006000103,
+              "p1": 0.0,
+              "p99": 1.0,
+              "zero_count": 40000,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          }
+        }
+      }
+    }
+  },
+  "Online Retail.xlsx": {
+    "filename": "Online Retail.xlsx",
+    "file_type": ".xlsx",
+    "file_size_bytes": 23715344,
+    "file_size_mb": 22.62,
+    "total_rows": 541909,
+    "max_cols": 8,
+    "number_of_sheets": 1,
+    "provenance": "REAL",
+    "recoverai_roles": [
+      "TRANSACTION_BEHAVIOR",
+      "CUSTOMER_BEHAVIOR"
+    ],
+    "importance_tier": "SECONDARY",
+    "recommendation_ranking": "SECONDARY DATASET (Historical Purchase & Customer Lifetime Dynamics)",
+    "sheets": {
+      "Online Retail": {
+        "num_rows": 541909,
+        "num_cols": 8,
+        "duplicate_rows": 5268,
+        "columns": {
+          "InvoiceNo": {
+            "dtype": "object",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 25900,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 25900,
+              "top_10": {
+                "573585": 1114,
+                "581219": 749,
+                "581492": 731,
+                "580729": 721,
+                "558475": 705,
+                "579777": 687,
+                "581217": 676,
+                "537434": 675,
+                "580730": 662,
+                "538071": 652
+              }
+            }
+          },
+          "StockCode": {
+            "dtype": "object",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 4070,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 4070,
+              "top_10": {
+                "85123A": 2313,
+                "22423": 2203,
+                "85099B": 2159,
+                "47566": 1727,
+                "20725": 1639,
+                "84879": 1502,
+                "22720": 1477,
+                "22197": 1476,
+                "21212": 1385,
+                "20727": 1350
+              }
+            }
+          },
+          "Description": {
+            "dtype": "object",
+            "inferred_type": "categorical",
+            "missing_count": 1454,
+            "missing_pct": 0.2683,
+            "unique_count": 4224,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 4224,
+              "top_10": {
+                "WHITE HANGING HEART T-LIGHT HOLDER": 2369,
+                "REGENCY CAKESTAND 3 TIER": 2200,
+                "JUMBO BAG RED RETROSPOT": 2159,
+                "PARTY BUNTING": 1727,
+                "LUNCH BAG RED RETROSPOT": 1638,
+                "ASSORTED COLOUR BIRD ORNAMENT": 1501,
+                "SET OF 3 CAKE TINS PANTRY DESIGN ": 1473,
+                "nan": 1454,
+                "PACK OF 72 RETROSPOT CAKE CASES": 1385,
+                "LUNCH BAG  BLACK SKULL.": 1350
+              }
+            }
+          },
+          "Quantity": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 722,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": -80995.0,
+              "max": 80995.0,
+              "mean": 9.55224954743324,
+              "median": 3.0,
+              "std": 218.08115785023386,
+              "p1": -2.0,
+              "p99": 100.0,
+              "zero_count": 0,
+              "negative_count": 10624
+            },
+            "categorical_stats": null
+          },
+          "InvoiceDate": {
+            "dtype": "datetime64[us]",
+            "inferred_type": "datetime",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 23260,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "2010-12-01 08:26:00",
+              "max": "2011-12-09 12:50:00",
+              "coverage": "373 days 04:24:00"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "UnitPrice": {
+            "dtype": "float64",
+            "inferred_type": "monetary",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 1630,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": -11062.06,
+              "max": 38970.0,
+              "mean": 4.611113626088514,
+              "median": 2.08,
+              "std": 96.75985306117937,
+              "p1": 0.19,
+              "p99": 18.0,
+              "zero_count": 2515,
+              "negative_count": 2
+            },
+            "categorical_stats": null
+          },
+          "CustomerID": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 135080,
+            "missing_pct": 24.9267,
+            "unique_count": 4373,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 12346.0,
+              "max": 18287.0,
+              "mean": 15287.690570239585,
+              "median": 15152.0,
+              "std": 1713.600303321598,
+              "p1": 12415.0,
+              "p99": 18212.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "Country": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 38,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 38,
+              "top_10": {
+                "United Kingdom": 495478,
+                "Germany": 9495,
+                "France": 8557,
+                "EIRE": 8196,
+                "Spain": 2533,
+                "Netherlands": 2371,
+                "Belgium": 2069,
+                "Switzerland": 2002,
+                "Portugal": 1519,
+                "Australia": 1259
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "UPI_transactions.csv": {
+    "filename": "UPI_transactions.csv",
+    "file_type": ".csv",
+    "file_size_bytes": 137073,
+    "file_size_mb": 0.13,
+    "total_rows": 1000,
+    "max_cols": 8,
+    "number_of_sheets": 1,
+    "provenance": "SYNTHETIC",
+    "recoverai_roles": [
+      "INDIAN_PAYMENT_CONTEXT",
+      "PAYMENT_BEHAVIOR"
+    ],
+    "importance_tier": "SECONDARY",
+    "recommendation_ranking": "SIMULATOR INPUT DATA (Indian UPI Ecosystem Dynamics)",
+    "sheets": {
+      "default": {
+        "num_rows": 1000,
+        "num_cols": 8,
+        "duplicate_rows": 0,
+        "columns": {
+          "Transaction ID": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 1000,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 1000,
+              "top_10": {
+                "4d3db980-46cd-4158-a812-dcb77055d0d2": 1,
+                "099ee548-2fc1-4811-bf92-559c467ca792": 1,
+                "d4c05732-6b1b-4bab-90b9-efe09d252b99": 1,
+                "e8df92ee-8b04-4133-af5a-5f412180c8ab": 1,
+                "e7d675d3-04f1-419c-a841-7a04662560b7": 1,
+                "865cfff6-e345-4bae-a4ed-2c35c3a67fc7": 1,
+                "10b78cb6-0a05-429a-8cf5-7ac40b97cd37": 1,
+                "2582bdc0-4ea3-4a92-8329-72cd84b429f6": 1,
+                "9a981fdf-f953-4fc6-8a7d-bfc26f1ea4dc": 1,
+                "718cebcd-cec3-49d5-a24b-d4f6df6ca25f": 1
+              }
+            }
+          },
+          "Timestamp": {
+            "dtype": "str",
+            "inferred_type": "datetime",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 1000,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "2024-06-04 00:15:27",
+              "max": "2024-07-03 23:15:06",
+              "coverage": "29 days 22:59:39"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "Sender Name": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 997,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 997,
+              "top_10": {
+                "Aayush Bakshi": 2,
+                "Prerak Lanka": 2,
+                "Ivan Ramesh": 2,
+                "Tiya Mall": 1,
+                "Mohanlal Bakshi": 1,
+                "Kismat Bora": 1,
+                "Ayesha Korpal": 1,
+                "Jivin Batta": 1,
+                "Kismat Rama": 1,
+                "Ivana Tak": 1
+              }
+            }
+          },
+          "Sender UPI ID": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 1000,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 1000,
+              "top_10": {
+                "4161803452@okaxis": 1,
+                "8908837379@okaxis": 1,
+                "4633654150@okybl": 1,
+                "7018842771@okhdfcbank": 1,
+                "1977143985@okybl": 1,
+                "5438757524@okicici": 1,
+                "0518391082@okaxis": 1,
+                "8203474864@oksbi": 1,
+                "8893886778@okhdfcbank": 1,
+                "3530841200@okicici": 1
+              }
+            }
+          },
+          "Receiver Name": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 996,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 996,
+              "top_10": {
+                "Samarth Gala": 2,
+                "Tarini Anand": 2,
+                "Ryan Varughese": 2,
+                "Purab Gandhi": 2,
+                "Mohanlal Golla": 1,
+                "Mehul Sankaran": 1,
+                "Diya Goel": 1,
+                "Rhea Kothari": 1,
+                "Baiju Issac": 1,
+                "Pihu Walia": 1
+              }
+            }
+          },
+          "Receiver UPI ID": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 1000,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 1000,
+              "top_10": {
+                "7776849307@okybl": 1,
+                "7683454560@okaxis": 1,
+                "2598130823@okicici": 1,
+                "2246623650@okaxis": 1,
+                "5245672729@okybl": 1,
+                "7567741566@okicici": 1,
+                "2677492476@okhdfcbank": 1,
+                "9427710364@oksbi": 1,
+                "0762409234@okaxis": 1,
+                "2825774999@oksbi": 1
+              }
+            }
+          },
+          "Amount (INR)": {
+            "dtype": "float64",
+            "inferred_type": "monetary",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 999,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 28.52,
+              "max": 9993.06,
+              "mean": 4999.02293,
+              "median": 4951.4349999999995,
+              "std": 2873.4845337613842,
+              "p1": 143.1663,
+              "p99": 9913.9423,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "Status": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 2,
+              "top_10": {
+                "SUCCESS": 502,
+                "FAILED": 498
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "WA_Fn-UseC_-Accounts-Receivable.csv": {
+    "filename": "WA_Fn-UseC_-Accounts-Receivable.csv",
+    "file_type": ".csv",
+    "file_size_bytes": 220150,
+    "file_size_mb": 0.21,
+    "total_rows": 2466,
+    "max_cols": 12,
+    "number_of_sheets": 1,
+    "provenance": "REAL",
+    "recoverai_roles": [
+      "RECEIVABLES",
+      "CUSTOMER_BEHAVIOR",
+      "PAYMENT_BEHAVIOR"
+    ],
+    "importance_tier": "CORE",
+    "recommendation_ranking": "PRIMARY DATASET (Receivables Recovery)",
+    "sheets": {
+      "default": {
+        "num_rows": 2466,
+        "num_cols": 12,
+        "duplicate_rows": 0,
+        "columns": {
+          "countryCode": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 5,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 391.0,
+              "max": 897.0,
+              "mean": 620.4460665044606,
+              "median": 770.0,
+              "std": 215.93360985461686,
+              "p1": 391.0,
+              "p99": 897.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "customerID": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 100,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 100,
+              "top_10": {
+                "9149-MATVB": 36,
+                "8887-NCUZC": 35,
+                "4640-FGEJI": 35,
+                "9286-VLKMI": 34,
+                "0688-XNJRO": 34,
+                "6833-ETVHD": 33,
+                "8389-TCXFQ": 33,
+                "8690-EEBEO": 31,
+                "8156-PCYBM": 31,
+                "1080-NDGAE": 31
+              }
+            }
+          },
+          "PaperlessDate": {
+            "dtype": "str",
+            "inferred_type": "datetime",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 91,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "2012-01-09 00:00:00",
+              "max": "2013-11-27 00:00:00",
+              "coverage": "688 days 00:00:00"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "invoiceNumber": {
+            "dtype": "int64",
+            "inferred_type": "monetary",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2466,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 611365.0,
+              "max": 9990243864.0,
+              "mean": 4978430514.9724245,
+              "median": 4964228313.5,
+              "std": 2884271865.4707103,
+              "p1": 79569714.20000002,
+              "p99": 9882846564.85,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "InvoiceDate": {
+            "dtype": "str",
+            "inferred_type": "datetime",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 681,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "2012-01-03 00:00:00",
+              "max": "2013-12-02 00:00:00",
+              "coverage": "699 days 00:00:00"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "DueDate": {
+            "dtype": "str",
+            "inferred_type": "datetime",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 681,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "2012-02-02 00:00:00",
+              "max": "2014-01-01 00:00:00",
+              "coverage": "699 days 00:00:00"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "InvoiceAmount": {
+            "dtype": "float64",
+            "inferred_type": "monetary",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2098,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 5.26,
+              "max": 128.28,
+              "mean": 59.89585563665855,
+              "median": 60.56,
+              "std": 20.435837797076005,
+              "p1": 10.16,
+              "p99": 104.19499999999995,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "Disputed": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 2,
+              "top_10": {
+                "No": 1905,
+                "Yes": 561
+              }
+            }
+          },
+          "SettledDate": {
+            "dtype": "str",
+            "inferred_type": "datetime",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 695,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "2012-01-13 00:00:00",
+              "max": "2014-01-09 00:00:00",
+              "coverage": "727 days 00:00:00"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "PaperlessBill": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 2,
+              "top_10": {
+                "Paper": 1263,
+                "Electronic": 1203
+              }
+            }
+          },
+          "DaysToSettle": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 67,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 75.0,
+              "mean": 26.4448499594485,
+              "median": 26.0,
+              "std": 12.334930357925916,
+              "p1": 2.0,
+              "p99": 56.0,
+              "zero_count": 4,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "DaysLate": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 37,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 45.0,
+              "mean": 3.442416869424169,
+              "median": 0.0,
+              "std": 6.290606771039917,
+              "p1": 0.0,
+              "p99": 26.0,
+              "zero_count": 1589,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          }
+        }
+      }
+    }
+  },
+  "customer_churn_business_dataset.csv": {
+    "filename": "customer_churn_business_dataset.csv",
+    "file_type": ".csv",
+    "file_size_bytes": 1769457,
+    "file_size_mb": 1.69,
+    "total_rows": 10000,
+    "max_cols": 32,
+    "number_of_sheets": 1,
+    "provenance": "UNKNOWN",
+    "recoverai_roles": [
+      "CUSTOMER_LIFECYCLE",
+      "PAYMENT_BEHAVIOR",
+      "SUBSCRIPTION"
+    ],
+    "importance_tier": "CORE",
+    "recommendation_ranking": "PRIMARY DATASET (B2B SaaS Churn & Payment Failure)",
+    "sheets": {
+      "default": {
+        "num_rows": 10000,
+        "num_cols": 32,
+        "duplicate_rows": 0,
+        "columns": {
+          "customer_id": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 10000,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 10000,
+              "top_10": {
+                "CUST_00001": 1,
+                "CUST_00002": 1,
+                "CUST_00003": 1,
+                "CUST_00004": 1,
+                "CUST_00005": 1,
+                "CUST_00006": 1,
+                "CUST_00007": 1,
+                "CUST_00008": 1,
+                "CUST_00009": 1,
+                "CUST_00010": 1
+              }
+            }
+          },
+          "gender": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 2,
+              "top_10": {
+                "Male": 5013,
+                "Female": 4987
+              }
+            }
+          },
+          "age": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 57,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 18.0,
+              "max": 74.0,
+              "mean": 45.9061,
+              "median": 46.0,
+              "std": 16.420415518328987,
+              "p1": 18.0,
+              "p99": 74.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "country": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 7,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 7,
+              "top_10": {
+                "Bangladesh": 1494,
+                "Canada": 1488,
+                "USA": 1442,
+                "India": 1427,
+                "Australia": 1400,
+                "UK": 1382,
+                "Germany": 1367
+              }
+            }
+          },
+          "city": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 7,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 7,
+              "top_10": {
+                "London": 1518,
+                "Sydney": 1471,
+                "Dhaka": 1459,
+                "Delhi": 1402,
+                "Berlin": 1386,
+                "New York": 1385,
+                "Toronto": 1379
+              }
+            }
+          },
+          "customer_segment": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 3,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 3,
+              "top_10": {
+                "Individual": 5984,
+                "SME": 3029,
+                "Enterprise": 987
+              }
+            }
+          },
+          "tenure_months": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 59,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1.0,
+              "max": 59.0,
+              "mean": 30.1557,
+              "median": 30.0,
+              "std": 17.099517445228855,
+              "p1": 1.0,
+              "p99": 59.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "signup_channel": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 3,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 3,
+              "top_10": {
+                "Web": 5036,
+                "Mobile": 2960,
+                "Referral": 2004
+              }
+            }
+          },
+          "contract_type": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 3,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 3,
+              "top_10": {
+                "Monthly": 4967,
+                "Quarterly": 3050,
+                "Yearly": 1983
+              }
+            }
+          },
+          "monthly_logins": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 53,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 54.0,
+              "mean": 19.672,
+              "median": 20.0,
+              "std": 9.838002573157976,
+              "p1": 0.0,
+              "p99": 43.0,
+              "zero_count": 299,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "weekly_active_days": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 8,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 7.0,
+              "mean": 3.4794,
+              "median": 3.0,
+              "std": 2.3022827129979184,
+              "p1": 0.0,
+              "p99": 7.0,
+              "zero_count": 1322,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "avg_session_time": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 9777,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1.0,
+              "max": 41.99641122063896,
+              "mean": 15.187889627126848,
+              "median": 15.161658613767617,
+              "std": 6.830773725737504,
+              "p1": 1.0,
+              "p99": 31.344305026802743,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "features_used": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 15,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1.0,
+              "max": 15.0,
+              "mean": 4.9908,
+              "median": 5.0,
+              "std": 2.2116067644244635,
+              "p1": 1.0,
+              "p99": 11.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "usage_growth_rate": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 104,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": -0.58,
+              "max": 0.54,
+              "mean": 0.019423000000000003,
+              "median": 0.02,
+              "std": 0.14956682150266296,
+              "p1": -0.33009999999999995,
+              "p99": 0.38,
+              "zero_count": 291,
+              "negative_count": 4345
+            },
+            "categorical_stats": null
+          },
+          "last_login_days_ago": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 71,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 80.0,
+              "mean": 9.5052,
+              "median": 6.0,
+              "std": 9.799417116215727,
+              "p1": 0.0,
+              "p99": 45.0,
+              "zero_count": 931,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "monthly_fee": {
+            "dtype": "int64",
+            "inferred_type": "monetary",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 6,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 10.0,
+              "max": 100.0,
+              "mean": 34.93,
+              "median": 30.0,
+              "std": 23.785114529203273,
+              "p1": 10.0,
+              "p99": 100.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "total_revenue": {
+            "dtype": "int64",
+            "inferred_type": "monetary",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 221,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 10.0,
+              "max": 5900.0,
+              "mean": 1057.018,
+              "median": 720.0,
+              "std": 1020.1482333062149,
+              "p1": 20.0,
+              "p99": 4800.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "payment_method": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 3,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 3,
+              "top_10": {
+                "Card": 5955,
+                "PayPal": 2557,
+                "Bank Transfer": 1488
+              }
+            }
+          },
+          "payment_failures": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 6,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 5.0,
+              "mean": 0.501,
+              "median": 0.0,
+              "std": 0.7119337644531947,
+              "p1": 0.0,
+              "p99": 3.0,
+              "zero_count": 6084,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "discount_applied": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 2,
+              "top_10": {
+                "No": 6950,
+                "Yes": 3050
+              }
+            }
+          },
+          "price_increase_last_3m": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 2,
+              "top_10": {
+                "No": 8055,
+                "Yes": 1945
+              }
+            }
+          },
+          "support_tickets": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 8,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 7.0,
+              "mean": 1.2066,
+              "median": 1.0,
+              "std": 1.104553504292293,
+              "p1": 0.0,
+              "p99": 4.0,
+              "zero_count": 3012,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "avg_resolution_time": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 9883,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1.0,
+              "max": 61.821878489966416,
+              "mean": 23.953210379817342,
+              "median": 23.95044388185854,
+              "std": 9.95699942585703,
+              "p1": 1.0,
+              "p99": 47.19281809587245,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "complaint_type": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 2045,
+            "missing_pct": 20.45,
+            "unique_count": 4,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 4,
+              "top_10": {
+                "Technical": 3498,
+                "Billing": 2427,
+                "nan": 2045,
+                "Service": 2030
+              }
+            }
+          },
+          "csat_score": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 5,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1.0,
+              "max": 5.0,
+              "mean": 3.4867,
+              "median": 4.0,
+              "std": 0.9786311265682227,
+              "p1": 1.0,
+              "p99": 5.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "escalations": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 5,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 4.0,
+              "mean": 0.2941,
+              "median": 0.0,
+              "std": 0.5431709615483388,
+              "p1": 0.0,
+              "p99": 2.0,
+              "zero_count": 7445,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "email_open_rate": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 81,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.1,
+              "max": 0.9,
+              "mean": 0.49961000000000005,
+              "median": 0.5,
+              "std": 0.23160058675050527,
+              "p1": 0.11,
+              "p99": 0.89,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "marketing_click_rate": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 50,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.01,
+              "max": 0.5,
+              "mean": 0.253575,
+              "median": 0.25,
+              "std": 0.1405320757031296,
+              "p1": 0.02,
+              "p99": 0.49,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "nps_score": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 197,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": -100.0,
+              "max": 100.0,
+              "mean": 19.1105,
+              "median": 19.0,
+              "std": 38.936618956704216,
+              "p1": -73.0,
+              "p99": 100.0,
+              "zero_count": 167,
+              "negative_count": 3009
+            },
+            "categorical_stats": null
+          },
+          "survey_response": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 3,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 3,
+              "top_10": {
+                "Satisfied": 4975,
+                "Neutral": 2978,
+                "Unsatisfied": 2047
+              }
+            }
+          },
+          "referral_count": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 8,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 7.0,
+              "mean": 0.9922,
+              "median": 1.0,
+              "std": 0.99390036914893,
+              "p1": 0.0,
+              "p99": 4.0,
+              "zero_count": 3704,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "churn": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 1.0,
+              "mean": 0.1021,
+              "median": 0.0,
+              "std": 0.3027949115752238,
+              "p1": 0.0,
+              "p99": 1.0,
+              "zero_count": 8979,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          }
+        }
+      }
+    }
+  },
+  "customer_churn_dataset.csv": {
+    "filename": "customer_churn_dataset.csv",
+    "file_type": ".csv",
+    "file_size_bytes": 1623721,
+    "file_size_mb": 1.55,
+    "total_rows": 50000,
+    "max_cols": 7,
+    "number_of_sheets": 1,
+    "provenance": "UNKNOWN",
+    "recoverai_roles": [
+      "CUSTOMER_LIFECYCLE"
+    ],
+    "importance_tier": "OPTIONAL",
+    "recommendation_ranking": "OPTIONAL DATA (Generic Telecom B2C Churn)",
+    "sheets": {
+      "default": {
+        "num_rows": 50000,
+        "num_cols": 7,
+        "duplicate_rows": 0,
+        "columns": {
+          "tenure_months": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 59,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1.0,
+              "max": 59.0,
+              "mean": 30.02976,
+              "median": 30.0,
+              "std": 16.997770819335592,
+              "p1": 1.0,
+              "p99": 59.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "monthly_usage_hours": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 49998,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 38.726896139879145,
+              "mean": 20.000410729747625,
+              "median": 20.026255869694033,
+              "std": 4.996692958753484,
+              "p1": 8.367217555806935,
+              "p99": 31.598802766737606,
+              "zero_count": 3,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "has_multiple_devices": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 1.0,
+              "mean": 0.39882,
+              "median": 0.0,
+              "std": 0.4896604976389855,
+              "p1": 0.0,
+              "p99": 1.0,
+              "zero_count": 30059,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "customer_support_calls": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 9,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 8.0,
+              "mean": 1.20568,
+              "median": 1.0,
+              "std": 1.1012356659679343,
+              "p1": 0.0,
+              "p99": 4.0,
+              "zero_count": 15042,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "payment_failures": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 1.0,
+              "mean": 0.09878,
+              "median": 0.0,
+              "std": 0.2983693886541341,
+              "p1": 0.0,
+              "p99": 1.0,
+              "zero_count": 45061,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "is_premium_plan": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 1.0,
+              "mean": 0.29834,
+              "median": 0.0,
+              "std": 0.45753407648897904,
+              "p1": 0.0,
+              "p99": 1.0,
+              "zero_count": 35083,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "churn": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 1.0,
+              "mean": 0.02066,
+              "median": 0.0,
+              "std": 0.14224475059341005,
+              "p1": 0.0,
+              "p99": 1.0,
+              "zero_count": 48967,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          }
+        }
+      }
+    }
+  },
+  "customer_subscription_churn_usage_patterns.csv": {
+    "filename": "customer_subscription_churn_usage_patterns.csv",
+    "file_type": ".csv",
+    "file_size_bytes": 126307,
+    "file_size_mb": 0.12,
+    "total_rows": 2800,
+    "max_cols": 10,
+    "number_of_sheets": 1,
+    "provenance": "UNKNOWN",
+    "recoverai_roles": [
+      "SUBSCRIPTION",
+      "CUSTOMER_BEHAVIOR"
+    ],
+    "importance_tier": "OPTIONAL",
+    "recommendation_ranking": "OPTIONAL DATA (Consumer Subscription Usage)",
+    "sheets": {
+      "default": {
+        "num_rows": 2800,
+        "num_cols": 10,
+        "duplicate_rows": 0,
+        "columns": {
+          "user_id": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2800,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1.0,
+              "max": 2800.0,
+              "mean": 1400.5,
+              "median": 1400.5,
+              "std": 808.4347015477914,
+              "p1": 28.990000000000002,
+              "p99": 2772.0099999999998,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "signup_date": {
+            "dtype": "str",
+            "inferred_type": "datetime",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 710,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "2023-01-01 00:00:00",
+              "max": "2024-12-31 00:00:00",
+              "coverage": "730 days 00:00:00"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "plan_type": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 3,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 3,
+              "top_10": {
+                "Premium": 944,
+                "Standard": 933,
+                "Basic": 923
+              }
+            }
+          },
+          "monthly_fee": {
+            "dtype": "int64",
+            "inferred_type": "monetary",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 3,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 199.0,
+              "max": 699.0,
+              "mean": 434.2142857142857,
+              "median": 399.0,
+              "std": 205.67847225925428,
+              "p1": 199.0,
+              "p99": 699.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "avg_weekly_usage_hours": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 246,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.5,
+              "max": 25.0,
+              "mean": 12.891428571428571,
+              "median": 12.8,
+              "std": 7.109690619811599,
+              "p1": 0.7,
+              "p99": 24.700999999999976,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "support_tickets": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 9,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 8.0,
+              "mean": 3.887857142857143,
+              "median": 4.0,
+              "std": 2.606419312039803,
+              "p1": 0.0,
+              "p99": 8.0,
+              "zero_count": 345,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "payment_failures": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 6,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 5.0,
+              "mean": 2.4917857142857143,
+              "median": 2.0,
+              "std": 1.6916467822239687,
+              "p1": 0.0,
+              "p99": 5.0,
+              "zero_count": 442,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "tenure_months": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 36,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1.0,
+              "max": 36.0,
+              "mean": 18.61285714285714,
+              "median": 18.0,
+              "std": 10.37448737341338,
+              "p1": 1.0,
+              "p99": 36.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "last_login_days_ago": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 61,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 60.0,
+              "mean": 30.005,
+              "median": 30.0,
+              "std": 17.852757399536422,
+              "p1": 0.0,
+              "p99": 60.0,
+              "zero_count": 38,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "churn": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 2,
+              "top_10": {
+                "Yes": 1605,
+                "No": 1195
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "online_retail_II.xlsx": {
+    "filename": "online_retail_II.xlsx",
+    "file_type": ".xlsx",
+    "file_size_bytes": 45622278,
+    "file_size_mb": 43.51,
+    "total_rows": 1067371,
+    "max_cols": 8,
+    "number_of_sheets": 2,
+    "provenance": "REAL",
+    "recoverai_roles": [
+      "TRANSACTION_BEHAVIOR",
+      "CUSTOMER_BEHAVIOR"
+    ],
+    "importance_tier": "SECONDARY",
+    "recommendation_ranking": "SECONDARY DATASET (Historical Purchase & Customer Lifetime Dynamics)",
+    "sheets": {
+      "Year 2009-2010": {
+        "num_rows": 525461,
+        "num_cols": 8,
+        "duplicate_rows": 6865,
+        "columns": {
+          "Invoice": {
+            "dtype": "object",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 28816,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 28816,
+              "top_10": {
+                "537434": 675,
+                "538071": 652,
+                "537638": 601,
+                "537237": 597,
+                "536876": 593,
+                "536592": 592,
+                "537823": 591,
+                "536031": 582,
+                "490074": 580,
+                "491966": 579
+              }
+            }
+          },
+          "StockCode": {
+            "dtype": "object",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 4632,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 4632,
+              "top_10": {
+                "85123A": 3516,
+                "22423": 2221,
+                "85099B": 2057,
+                "21212": 1933,
+                "21232": 1843,
+                "20725": 1620,
+                "84879": 1458,
+                "84991": 1400,
+                "21754": 1386,
+                "20914": 1276
+              }
+            }
+          },
+          "Description": {
+            "dtype": "object",
+            "inferred_type": "categorical",
+            "missing_count": 2928,
+            "missing_pct": 0.5572,
+            "unique_count": 4682,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 4682,
+              "top_10": {
+                "WHITE HANGING HEART T-LIGHT HOLDER": 3549,
+                "nan": 2928,
+                "REGENCY CAKESTAND 3 TIER": 2212,
+                "STRAWBERRY CERAMIC TRINKET BOX": 1843,
+                "PACK OF 72 RETRO SPOT CAKE CASES": 1466,
+                "ASSORTED COLOUR BIRD ORNAMENT": 1457,
+                "60 TEATIME FAIRY CAKE CASES": 1400,
+                "HOME BUILDING BLOCK WORD": 1386,
+                "JUMBO BAG RED RETROSPOT": 1310,
+                "LUNCH BAG RED SPOTTY": 1274
+              }
+            }
+          },
+          "Quantity": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 825,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": -9600.0,
+              "max": 19152.0,
+              "mean": 10.337667305470815,
+              "median": 3.0,
+              "std": 107.42411026879778,
+              "p1": -3.0,
+              "p99": 120.0,
+              "zero_count": 0,
+              "negative_count": 12326
+            },
+            "categorical_stats": null
+          },
+          "InvoiceDate": {
+            "dtype": "datetime64[us]",
+            "inferred_type": "datetime",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 25296,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "2009-12-01 07:45:00",
+              "max": "2010-12-09 20:01:00",
+              "coverage": "373 days 12:16:00"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "Price": {
+            "dtype": "float64",
+            "inferred_type": "monetary",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 1606,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": -53594.36,
+              "max": 25111.09,
+              "mean": 4.688834478676819,
+              "median": 2.1,
+              "std": 146.1269139529265,
+              "p1": 0.21,
+              "p99": 19.95,
+              "zero_count": 3687,
+              "negative_count": 3
+            },
+            "categorical_stats": null
+          },
+          "Customer ID": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 107927,
+            "missing_pct": 20.5395,
+            "unique_count": 4384,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 12346.0,
+              "max": 18287.0,
+              "mean": 15360.645477973052,
+              "median": 15311.0,
+              "std": 1680.8113157457142,
+              "p1": 12435.0,
+              "p99": 18196.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "Country": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 40,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 40,
+              "top_10": {
+                "United Kingdom": 485852,
+                "EIRE": 9670,
+                "Germany": 8129,
+                "France": 5772,
+                "Netherlands": 2769,
+                "Spain": 1278,
+                "Switzerland": 1187,
+                "Portugal": 1101,
+                "Belgium": 1054,
+                "Channel Islands": 906
+              }
+            }
+          }
+        }
+      },
+      "Year 2010-2011": {
+        "num_rows": 541910,
+        "num_cols": 8,
+        "duplicate_rows": 5268,
+        "columns": {
+          "Invoice": {
+            "dtype": "object",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 25900,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 25900,
+              "top_10": {
+                "573585": 1114,
+                "581219": 749,
+                "581492": 731,
+                "580729": 721,
+                "558475": 705,
+                "579777": 687,
+                "581217": 676,
+                "537434": 675,
+                "580730": 662,
+                "538071": 652
+              }
+            }
+          },
+          "StockCode": {
+            "dtype": "object",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 4070,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 4070,
+              "top_10": {
+                "85123A": 2313,
+                "22423": 2203,
+                "85099B": 2159,
+                "47566": 1727,
+                "20725": 1639,
+                "84879": 1502,
+                "22720": 1477,
+                "22197": 1476,
+                "21212": 1385,
+                "20727": 1350
+              }
+            }
+          },
+          "Description": {
+            "dtype": "object",
+            "inferred_type": "categorical",
+            "missing_count": 1454,
+            "missing_pct": 0.2683,
+            "unique_count": 4224,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 4224,
+              "top_10": {
+                "WHITE HANGING HEART T-LIGHT HOLDER": 2369,
+                "REGENCY CAKESTAND 3 TIER": 2200,
+                "JUMBO BAG RED RETROSPOT": 2159,
+                "PARTY BUNTING": 1727,
+                "LUNCH BAG RED RETROSPOT": 1638,
+                "ASSORTED COLOUR BIRD ORNAMENT": 1501,
+                "SET OF 3 CAKE TINS PANTRY DESIGN ": 1473,
+                "nan": 1454,
+                "PACK OF 72 RETROSPOT CAKE CASES": 1385,
+                "LUNCH BAG  BLACK SKULL.": 1350
+              }
+            }
+          },
+          "Quantity": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 722,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": -80995.0,
+              "max": 80995.0,
+              "mean": 9.552233765754462,
+              "median": 3.0,
+              "std": 218.08095694392432,
+              "p1": -2.0,
+              "p99": 100.0,
+              "zero_count": 0,
+              "negative_count": 10624
+            },
+            "categorical_stats": null
+          },
+          "InvoiceDate": {
+            "dtype": "datetime64[us]",
+            "inferred_type": "datetime",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 23260,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "2010-12-01 08:26:00",
+              "max": "2011-12-09 12:50:00",
+              "coverage": "373 days 04:24:00"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "Price": {
+            "dtype": "float64",
+            "inferred_type": "monetary",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 1630,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": -11062.06,
+              "max": 38970.0,
+              "mean": 4.611138332933514,
+              "median": 2.08,
+              "std": 96.75976549366526,
+              "p1": 0.19,
+              "p99": 18.0,
+              "zero_count": 2515,
+              "negative_count": 2
+            },
+            "categorical_stats": null
+          },
+          "Customer ID": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 135080,
+            "missing_pct": 24.9266,
+            "unique_count": 4373,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 12346.0,
+              "max": 18287.0,
+              "mean": 15287.684160460143,
+              "median": 15152.0,
+              "std": 1713.6030743514755,
+              "p1": 12415.0,
+              "p99": 18212.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "Country": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 38,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 38,
+              "top_10": {
+                "United Kingdom": 495478,
+                "Germany": 9495,
+                "France": 8558,
+                "EIRE": 8196,
+                "Spain": 2533,
+                "Netherlands": 2371,
+                "Belgium": 2069,
+                "Switzerland": 2002,
+                "Portugal": 1519,
+                "Australia": 1259
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "online_shoppers_intention.csv": {
+    "filename": "online_shoppers_intention.csv",
+    "file_type": ".csv",
+    "file_size_bytes": 1072063,
+    "file_size_mb": 1.02,
+    "total_rows": 12330,
+    "max_cols": 18,
+    "number_of_sheets": 1,
+    "provenance": "REAL",
+    "recoverai_roles": [
+      "CHECKOUT_BEHAVIOR"
+    ],
+    "importance_tier": "CORE",
+    "recommendation_ranking": "PRIMARY DATASET (Checkout Abandonment & Session Funnel)",
+    "sheets": {
+      "default": {
+        "num_rows": 12330,
+        "num_cols": 18,
+        "duplicate_rows": 125,
+        "columns": {
+          "Administrative": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 27,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 27.0,
+              "mean": 2.3151662611516626,
+              "median": 1.0,
+              "std": 3.3217841061569113,
+              "p1": 0.0,
+              "p99": 14.0,
+              "zero_count": 5768,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "Administrative_Duration": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 3335,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 3398.75,
+              "mean": 80.81861053933592,
+              "median": 7.5,
+              "std": 176.77910747048634,
+              "p1": 0.0,
+              "p99": 830.5870409259969,
+              "zero_count": 5903,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "Informational": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 17,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 24.0,
+              "mean": 0.5035685320356853,
+              "median": 0.0,
+              "std": 1.270156425983391,
+              "p1": 0.0,
+              "p99": 6.0,
+              "zero_count": 9699,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "Informational_Duration": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 1258,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 2549.375,
+              "mean": 34.47239792772304,
+              "median": 0.0,
+              "std": 140.74929442219795,
+              "p1": 0.0,
+              "p99": 716.3899999999921,
+              "zero_count": 9925,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "ProductRelated": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 311,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 705.0,
+              "mean": 31.731467964314678,
+              "median": 18.0,
+              "std": 44.47550330493652,
+              "p1": 1.0,
+              "p99": 221.0,
+              "zero_count": 38,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "ProductRelated_Duration": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 9551,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 63973.52223,
+              "mean": 1194.7462199688268,
+              "median": 598.9369047499999,
+              "std": 1913.6692878720035,
+              "p1": 0.0,
+              "p99": 8701.142696919998,
+              "zero_count": 755,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "BounceRates": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 1872,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 0.2,
+              "mean": 0.02219138047072182,
+              "median": 0.0031124675,
+              "std": 0.048488321806260656,
+              "p1": 0.0,
+              "p99": 0.2,
+              "zero_count": 5518,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "ExitRates": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 4777,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 0.2,
+              "mean": 0.04307279776650446,
+              "median": 0.0251564025,
+              "std": 0.048596540551443565,
+              "p1": 0.00125,
+              "p99": 0.2,
+              "zero_count": 76,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "PageValues": {
+            "dtype": "float64",
+            "inferred_type": "monetary",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2704,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 361.7637419,
+              "mean": 5.889257862693593,
+              "median": 0.0,
+              "std": 18.568436607806525,
+              "p1": 0.0,
+              "p99": 85.49849043159924,
+              "zero_count": 9600,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "SpecialDay": {
+            "dtype": "float64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 6,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 1.0,
+              "mean": 0.061427412814274114,
+              "median": 0.0,
+              "std": 0.19891727315262864,
+              "p1": 0.0,
+              "p99": 1.0,
+              "zero_count": 11079,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "Month": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 10,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 10,
+              "top_10": {
+                "May": 3364,
+                "Nov": 2998,
+                "Mar": 1907,
+                "Dec": 1727,
+                "Oct": 549,
+                "Sep": 448,
+                "Aug": 433,
+                "Jul": 432,
+                "June": 288,
+                "Feb": 184
+              }
+            }
+          },
+          "OperatingSystems": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 8,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1.0,
+              "max": 8.0,
+              "mean": 2.124006488240065,
+              "median": 2.0,
+              "std": 0.9113248287106649,
+              "p1": 1.0,
+              "p99": 4.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "Browser": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 13,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1.0,
+              "max": 13.0,
+              "mean": 2.357096512570965,
+              "median": 2.0,
+              "std": 1.7172766755534394,
+              "p1": 1.0,
+              "p99": 10.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "Region": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 9,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1.0,
+              "max": 9.0,
+              "mean": 3.1473641524736413,
+              "median": 3.0,
+              "std": 2.4015912367437138,
+              "p1": 1.0,
+              "p99": 9.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "TrafficType": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 20,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 1.0,
+              "max": 20.0,
+              "mean": 4.069586374695864,
+              "median": 2.0,
+              "std": 4.025169160452515,
+              "p1": 1.0,
+              "p99": 20.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "VisitorType": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 3,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 3,
+              "top_10": {
+                "Returning_Visitor": 10551,
+                "New_Visitor": 1694,
+                "Other": 85
+              }
+            }
+          },
+          "Weekend": {
+            "dtype": "bool",
+            "inferred_type": "boolean",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 2,
+              "top_10": {
+                "False": 9462,
+                "True": 2868
+              }
+            }
+          },
+          "Revenue": {
+            "dtype": "bool",
+            "inferred_type": "boolean",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count": 2,
+              "top_10": {
+                "False": 10422,
+                "True": 1908
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "synthetic_fraud_data.csv": {
+    "filename": "synthetic_fraud_data.csv",
+    "file_type": ".csv",
+    "file_size_bytes": 2934232016,
+    "file_size_mb": 2798.3,
+    "total_rows": 7483766,
+    "max_cols": 24,
+    "number_of_sheets": 1,
+    "provenance": "SYNTHETIC",
+    "recoverai_roles": [
+      "FRAUD / SAFETY",
+      "PAYMENT_BEHAVIOR"
+    ],
+    "importance_tier": "EXCLUDE",
+    "recommendation_ranking": "EXCLUDE (Card Fraud Security Log - Irrelevant to Revenue Recovery)",
+    "sheets": {
+      "default": {
+        "num_rows": 7483766,
+        "num_cols": 24,
+        "duplicate_rows": "Not computed for >1M rows",
+        "columns": {
+          "transaction_id": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": ">5000",
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": ">5000",
+              "top_10_sample": {
+                "TX_d1d57fce": 1,
+                "TX_66be7556": 1,
+                "TX_58a2a1fb": 1,
+                "TX_56517e39": 1,
+                "TX_d2ae57e6": 1,
+                "TX_55fabd69": 1,
+                "TX_ed620bbf": 1,
+                "TX_5c454d04": 1,
+                "TX_3438e097": 1,
+                "TX_98c23341": 1
+              }
+            }
+          },
+          "customer_id": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 4869,
+            "is_constant": false,
+            "is_likely_identifier": true,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 4869,
+              "top_10_sample": {
+                "CUST_64957": 22,
+                "CUST_24822": 20,
+                "CUST_71592": 19,
+                "CUST_37392": 19,
+                "CUST_98661": 19,
+                "CUST_49715": 18,
+                "CUST_91730": 18,
+                "CUST_88176": 18,
+                "CUST_91838": 18,
+                "CUST_84183": 18
+              }
+            }
+          },
+          "card_number": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": ">5000",
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 370008611452264.0,
+              "max": 6999728403598762.0,
+              "mean": 12048227375470.025,
+              "median": 5003432175155325.0,
+              "std": 0.0,
+              "p1": 370370684457780.0,
+              "p99": 6962814808072968.0,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "timestamp": {
+            "dtype": "str",
+            "inferred_type": "datetime",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": ">5000",
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": {
+              "min": "2024-09-30 00:00:03.149440+00:00",
+              "max": "2024-10-06 06:25:29.021605+00:00",
+              "coverage": "6 days 06:25:25.872165"
+            },
+            "numerical_stats": null,
+            "categorical_stats": null
+          },
+          "merchant_category": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 8,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 8,
+              "top_10_sample": {
+                "Education": 3843,
+                "Healthcare": 3809,
+                "Travel": 3742,
+                "Entertainment": 3740,
+                "Gas": 3730,
+                "Restaurant": 3724,
+                "Retail": 3723,
+                "Grocery": 3689
+              }
+            }
+          },
+          "merchant_type": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 17,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 17,
+              "top_10_sample": {
+                "online": 5714,
+                "physical": 3618,
+                "supplies": 1923,
+                "major": 1911,
+                "medical": 1910,
+                "pharmacy": 1899,
+                "local": 1819,
+                "fast_food": 1278,
+                "events": 1249,
+                "casual": 1248
+              }
+            }
+          },
+          "merchant": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 105,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 105,
+              "top_10_sample": {
+                "Barnes & Noble": 663,
+                "Chegg": 639,
+                "University Bookstore": 621,
+                "Highway Gas Stop": 619,
+                "Truck Stop": 601,
+                "Local Gas Station": 599,
+                "Walgreens": 499,
+                "Lab Corp": 494,
+                "Urgent Care": 493,
+                "Amazon Fresh": 489
+              }
+            }
+          },
+          "amount": {
+            "dtype": "float64",
+            "inferred_type": "monetary",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": ">5000",
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": true,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.01,
+              "max": 6253152.62,
+              "mean": 47924.68453206448,
+              "median": 1176.315,
+              "std": 177556.1685366756,
+              "p1": 3.6099,
+              "p99": 795111.3422999989,
+              "zero_count": 0,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "currency": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 11,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 11,
+              "top_10_sample": {
+                "EUR": 4333,
+                "NGN": 3446,
+                "MXN": 3284,
+                "RUB": 3241,
+                "BRL": 3190,
+                "SGD": 2392,
+                "GBP": 2061,
+                "JPY": 2060,
+                "CAD": 2029,
+                "USD": 1993
+              }
+            }
+          },
+          "country": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 12,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 12,
+              "top_10_sample": {
+                "Nigeria": 3446,
+                "Mexico": 3284,
+                "Russia": 3241,
+                "Brazil": 3190,
+                "Singapore": 2392,
+                "Germany": 2174,
+                "France": 2159,
+                "UK": 2061,
+                "Japan": 2060,
+                "Canada": 2029
+              }
+            }
+          },
+          "city": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 11,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 11,
+              "top_10_sample": {
+                "Unknown City": 28007,
+                "San Diego": 231,
+                "Chicago": 214,
+                "New York": 208,
+                "Phoenix": 204,
+                "Dallas": 198,
+                "Philadelphia": 194,
+                "San Antonio": 191,
+                "Houston": 188,
+                "Los Angeles": 184
+              }
+            }
+          },
+          "city_size": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 2,
+              "top_10_sample": {
+                "medium": 29206,
+                "large": 794
+              }
+            }
+          },
+          "card_type": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 5,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 5,
+              "top_10_sample": {
+                "Premium Debit": 6326,
+                "Basic Debit": 6183,
+                "Platinum Credit": 6147,
+                "Gold Credit": 5708,
+                "Basic Credit": 5636
+              }
+            }
+          },
+          "card_present": {
+            "dtype": "bool",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 2,
+              "top_10_sample": {
+                "False": 27273,
+                "True": 2727
+              }
+            }
+          },
+          "device": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 9,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 9,
+              "top_10_sample": {
+                "Edge": 4665,
+                "Safari": 4600,
+                "Chrome": 4524,
+                "iOS App": 4522,
+                "Android App": 4483,
+                "Firefox": 4479,
+                "Chip Reader": 952,
+                "Magnetic Stripe": 905,
+                "NFC Payment": 870
+              }
+            }
+          },
+          "channel": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 3,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 3,
+              "top_10_sample": {
+                "web": 18268,
+                "mobile": 9005,
+                "pos": 2727
+              }
+            }
+          },
+          "device_fingerprint": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": ">5000",
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": ">5000",
+              "top_10_sample": {
+                "707fe93fa58cfe069c0775dce47e811a": 15,
+                "5f6056a0d2987f2cd4aa97a97516041a": 15,
+                "fd06964cac93a4d2c8b10068d31d49f7": 14,
+                "ac293731aff6ec240f7c5e0356c44468": 13,
+                "edbf19047f219064dc01974a40f85536": 12,
+                "325cc422cdeafbf35af2a7d9a549c950": 12,
+                "7b77811857dd8524bd20be9233d3a98e": 12,
+                "0753bd2ea97953615239a705f3faa91f": 12,
+                "90de77031e2c4f767f179cb70a07c076": 12,
+                "10f937772884aedc12863c4e55ac3fb8": 12
+              }
+            }
+          },
+          "ip_address": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": ">5000",
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": ">5000",
+              "top_10_sample": {
+                "147.196.157.131": 1,
+                "122.173.63.27": 1,
+                "96.111.215.125": 1,
+                "209.97.34.175": 1,
+                "58.142.250.43": 1,
+                "31.248.52.244": 1,
+                "88.149.121.128": 1,
+                "212.90.162.31": 1,
+                "244.195.174.135": 1,
+                "189.102.245.16": 1
+              }
+            }
+          },
+          "distance_from_home": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 1.0,
+              "mean": 0.322051892055417,
+              "median": 0.0,
+              "std": 0.4672627428748659,
+              "p1": 0.0,
+              "p99": 1.0,
+              "zero_count": 5073605,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "high_risk_merchant": {
+            "dtype": "bool",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 2,
+              "top_10_sample": {
+                "False": 22518,
+                "True": 7482
+              }
+            }
+          },
+          "transaction_hour": {
+            "dtype": "int64",
+            "inferred_type": "numerical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 24,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": {
+              "min": 0.0,
+              "max": 23.0,
+              "mean": 12.154671458193642,
+              "median": 12.0,
+              "std": 6.536766485428697,
+              "p1": 0.0,
+              "p99": 23.0,
+              "zero_count": 155759,
+              "negative_count": 0
+            },
+            "categorical_stats": null
+          },
+          "weekend_transaction": {
+            "dtype": "bool",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 2,
+              "top_10_sample": {
+                "False": 24131,
+                "True": 5869
+              }
+            }
+          },
+          "velocity_last_hour": {
+            "dtype": "str",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": ">5000",
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": ">5000",
+              "top_10_sample": {
+                "{'num_transactions': 676, 'total_amount': 40250796.4768046, 'unique_merchants': 102, 'unique_countries': 12, 'max_single_amount': 3085041.480786325}": 1,
+                "{'num_transactions': 653, 'total_amount': 16734481.101362588, 'unique_merchants': 104, 'unique_countries': 12, 'max_single_amount': 2242044.155787199}": 1,
+                "{'num_transactions': 613, 'total_amount': 22456818.6225144, 'unique_merchants': 104, 'unique_countries': 12, 'max_single_amount': 2122146.2045335835}": 1,
+                "{'num_transactions': 392, 'total_amount': 13634246.837629719, 'unique_merchants': 101, 'unique_countries': 12, 'max_single_amount': 3157907.895797551}": 1,
+                "{'num_transactions': 91, 'total_amount': 1676271.626143774, 'unique_merchants': 57, 'unique_countries': 12, 'max_single_amount': 486755.3649971946}": 1,
+                "{'num_transactions': 164, 'total_amount': 3124807.7493498875, 'unique_merchants': 78, 'unique_countries': 12, 'max_single_amount': 658523.2040404548}": 1,
+                "{'num_transactions': 19, 'total_amount': 1124229.4771827254, 'unique_merchants': 19, 'unique_countries': 5, 'max_single_amount': 500921.35292431654}": 1,
+                "{'num_transactions': 424, 'total_amount': 55342487.02724123, 'unique_merchants': 102, 'unique_countries': 12, 'max_single_amount': 1931157.722830461}": 1,
+                "{'num_transactions': 288, 'total_amount': 9705430.451115675, 'unique_merchants': 90, 'unique_countries': 12, 'max_single_amount': 1727870.2323549427}": 1,
+                "{'num_transactions': 958, 'total_amount': 109092414.96676922, 'unique_merchants': 105, 'unique_countries': 12, 'max_single_amount': 5650394.161055449}": 1
+              }
+            }
+          },
+          "is_fraud": {
+            "dtype": "bool",
+            "inferred_type": "categorical",
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "unique_count": 2,
+            "is_constant": false,
+            "is_likely_identifier": false,
+            "is_monetary": false,
+            "datetime_stats": null,
+            "numerical_stats": null,
+            "categorical_stats": {
+              "unique_count_approx": 2,
+              "top_10_sample": {
+                "False": 23699,
+                "True": 6301
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
