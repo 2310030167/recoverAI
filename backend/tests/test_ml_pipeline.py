@@ -4,8 +4,6 @@ import pytest
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, r"d:\recoverai")
-
 from ml.data.dataset import InvoiceDatasetManager
 from ml.features.pipeline import MLFeaturePipeline
 from ml.models.baseline import LogisticRegressionBaseline
@@ -19,7 +17,7 @@ from app.schemas.canonical import ActionType
 
 @pytest.fixture
 def dataset_manager():
-    return InvoiceDatasetManager(raw_dir=r"d:\recoverai\data\raw")
+    return InvoiceDatasetManager()
 
 
 @pytest.fixture
@@ -101,7 +99,7 @@ def test_model_training_and_prediction_shape(sample_dataset):
     """
     Task 10 Test: Test fitting baseline and tabular ML models, prediction output shapes, and probability bounds.
     """
-    manager = InvoiceDatasetManager(raw_dir=r"d:\recoverai\data\raw")
+    manager = InvoiceDatasetManager()
     pipeline = MLFeaturePipeline()
 
     train_df, val_df, _, _ = manager.temporal_split(sample_dataset)

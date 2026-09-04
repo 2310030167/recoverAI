@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 from pydantic import BaseModel, Field
 from simulator.batch import BatchSimulator, BatchSimulationResult
 from app.core.logging import logger
@@ -43,7 +43,7 @@ class SensitivityAnalysisRunner:
     Evaluates ZERO_LIFT, CONSERVATIVE, BASE, and OPTIMISTIC action treatment scenarios.
     """
 
-    def __init__(self, raw_data_dir: str = r"d:\recoverai\data\raw"):
+    def __init__(self, raw_data_dir: Optional[str] = None):
         self.batch_simulator = BatchSimulator(raw_data_dir=raw_data_dir)
 
     def run_sensitivity_analysis(

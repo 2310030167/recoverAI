@@ -1,8 +1,8 @@
 from datetime import datetime
 import pandas as pd
 import numpy as np
-from typing import Dict, Any, Tuple
-from app.services.data_loader import DataLoader
+from typing import Dict, Any, Tuple, Optional
+from app.services.data_loader import DataLoader, DATA_RAW_DIR
 from app.core.logging import logger
 
 
@@ -13,8 +13,9 @@ class InvoiceDatasetManager:
     and performs chronological temporal data splitting.
     """
 
-    def __init__(self, raw_dir: str = r"d:\recoverai\data\raw"):
-        self.loader = DataLoader(raw_dir=raw_dir)
+    def __init__(self, raw_dir: Optional[str] = None):
+        target_dir = raw_dir if raw_dir is not None else DATA_RAW_DIR
+        self.loader = DataLoader(raw_dir=target_dir)
 
     def load_prepared_dataset(self, window_days: int = 30) -> pd.DataFrame:
         """

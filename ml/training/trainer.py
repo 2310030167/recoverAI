@@ -2,7 +2,7 @@ import os
 import joblib
 import numpy as np
 import pandas as pd
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, Optional
 from ml.data.dataset import InvoiceDatasetManager
 from ml.features.pipeline import MLFeaturePipeline
 from ml.models.baseline import LogisticRegressionBaseline
@@ -12,7 +12,10 @@ from ml.models.assisted_recovery import AssistedRecoveryEstimator
 from ml.evaluation.metrics import ModelEvaluator
 from app.core.logging import logger
 
-ARTIFACTS_DIR = r"d:\recoverai\ml\artifacts"
+_default_artifacts_dir = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "artifacts")
+)
+ARTIFACTS_DIR = os.getenv("ARTIFACTS_DIR", _default_artifacts_dir)
 
 
 class ModelTrainer:
@@ -22,7 +25,7 @@ class ModelTrainer:
     natural recovery estimation, and artifact saving.
     """
 
-    def __init__(self, raw_data_dir: str = r"d:\recoverai\data\raw", artifacts_dir: str = ARTIFACTS_DIR):
+    def __init__(self, raw_data_dir: Optional[str] = None, artifacts_dir: str = ARTIFACTS_DIR):
         self.dataset_manager = InvoiceDatasetManager(raw_dir=raw_data_dir)
         self.feature_pipeline = MLFeaturePipeline()
         self.baseline_model = LogisticRegressionBaseline()

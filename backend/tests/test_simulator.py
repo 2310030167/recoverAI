@@ -139,6 +139,22 @@ def test_batch_simulation_and_reproducibility():
     assert res1.net_incremental_revenue == res2.net_incremental_revenue
 
 
+def test_batch_simulator_default_path_resolution():
+    """
+    Regression Test: BatchSimulator must not hardcode Windows path 'd:\\recoverai\\data\\raw'
+    and must resolve dataset path dynamically using DATA_RAW_DIR.
+    """
+    import inspect
+    from app.services.data_loader import DATA_RAW_DIR
+
+    sig = inspect.signature(BatchSimulator.__init__)
+    param = sig.parameters["raw_data_dir"]
+    assert param.default is None, f"Expected default None, got {param.default}"
+
+    sim = BatchSimulator()
+    assert sim.loader.raw_dir == DATA_RAW_DIR
+
+
 def test_api_simulator_endpoints():
     """
     Test API Endpoints POST /run, POST /run-batch, GET /{id}, GET /{id}/audit

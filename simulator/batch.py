@@ -8,7 +8,7 @@ from pydantic import BaseModel, Field
 from simulator.state import SimulationOutcome, RecoveryStatus
 from simulator.engine import RecoverySimulatorEngine
 from app.schemas.canonical import ActionType
-from app.services.data_loader import DataLoader
+from app.services.data_loader import DataLoader, DATA_RAW_DIR
 from app.services.decision_engine import DecisionEngine
 from app.services.treatment_estimator import TreatmentEstimator
 from app.core.logging import logger
@@ -59,8 +59,9 @@ class BatchSimulator:
     Executes controlled batch simulations comparing Baseline (NO_ACTION) vs RecoverAI Policy Strategy.
     """
 
-    def __init__(self, raw_data_dir: str = r"d:\recoverai\data\raw"):
-        self.loader = DataLoader(raw_dir=raw_data_dir)
+    def __init__(self, raw_data_dir: Optional[str] = None):
+        target_dir = raw_data_dir if raw_data_dir is not None else DATA_RAW_DIR
+        self.loader = DataLoader(raw_dir=target_dir)
 
     def generate_empirical_opportunity_batch(self, batch_size: int = 100, seed: int = 42) -> List[Dict[str, Any]]:
         """
