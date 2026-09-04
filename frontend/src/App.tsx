@@ -42,29 +42,26 @@ export const App: React.FC = () => {
 
   const loadBackendData = async () => {
     setIsLoading(true);
+
+    // Launch batch simulation independently in background without blocking primary UI
+    api
+      .runBatchSimulation(100, 42)
+      .then((batch) => {
+        setBatchResult(batch);
+      })
+      .catch((err) => {
+        console.error('Failed to run batch simulation:', err);
+      });
+
+    // Primary opportunities fetch controls dashboard isLoading state
     try {
-      const [oppsResult, batchResult] = await Promise.allSettled([
-        api.getOpportunities(100, 42),
-        api.runBatchSimulation(100, 42),
-      ]);
-
-      if (oppsResult.status === 'fulfilled') {
-        const opps = oppsResult.value;
-        setOpportunities(opps);
-        if (opps.length > 0) {
-          setSelectedOpp(opps[0]);
-        }
-      } else {
-        console.error('Failed to load opportunities:', oppsResult.reason);
-      }
-
-      if (batchResult.status === 'fulfilled') {
-        setBatchResult(batchResult.value);
-      } else {
-        console.error('Failed to run batch simulation:', batchResult.reason);
+      const opps = await api.getOpportunities(100, 42);
+      setOpportunities(opps);
+      if (opps.length > 0) {
+        setSelectedOpp(opps[0]);
       }
     } catch (err) {
-      console.error('Failed to load backend data:', err);
+      console.error('Failed to load opportunities:', err);
     } finally {
       setIsLoading(false);
     }
