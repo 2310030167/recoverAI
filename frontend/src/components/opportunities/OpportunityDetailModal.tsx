@@ -7,7 +7,7 @@ interface OpportunityDetailModalProps {
   opportunity: RecoveryOpportunity | null;
   onClose: () => void;
   onExecute: (action: ActionType) => void;
-  onSyncPayment?: (opportunityId: string) => void;
+  onSyncPayment?: (opportunityId: string) => Promise<void> | void;
   isExecuting: boolean;
 }
 
@@ -19,6 +19,7 @@ export const OpportunityDetailModal: React.FC<OpportunityDetailModalProps> = ({
   isExecuting
 }) => {
   const [executionStage, setExecutionStage] = useState<'REVIEW' | 'VALIDATING' | 'EXECUTED'>('REVIEW');
+  const [isSyncing, setIsSyncing] = useState<boolean>(false);
 
   if (!opportunity) return null;
 
@@ -28,6 +29,18 @@ export const OpportunityDetailModal: React.FC<OpportunityDetailModalProps> = ({
     setExecutionStage('VALIDATING');
     await onExecute(action);
     setExecutionStage('EXECUTED');
+  };
+
+  const handleSyncPayment = async () => {
+    if (!onSyncPayment || !opportunity) return;
+    setIsSyncing(true);
+    try {
+      await onSyncPayment(opportunity.opportunity_id);
+    } catch (err) {
+      console.error('Error in handleSyncPayment:', err);
+    } finally {
+      setIsSyncing(false);
+    }
   };
 
   return (
@@ -185,11 +198,12 @@ export const OpportunityDetailModal: React.FC<OpportunityDetailModalProps> = ({
             </button>
             {onSyncPayment && (
               <button
-                onClick={() => onSyncPayment(opportunity.opportunity_id)}
-                className="px-4 py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 text-xs font-semibold transition flex items-center gap-1.5"
+                onClick={handleSyncPayment}
+                disabled={isSyncing}
+                className="px-4 py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 text-xs font-semibold transition flex items-center gap-1.5 disabled:opacity-50"
               >
-                <RefreshCw className="h-3.5 w-3.5" />
-                <span>Verify & Sync Payment</span>
+                <RefreshCw className={`h-3.5 w-3.5 ${isSyncing ? 'animate-spin' : ''}`} />
+                <span>{isSyncing ? 'VERIFYING PAYMENT...' : 'Verify & Sync Payment'}</span>
               </button>
             )}
           </div>

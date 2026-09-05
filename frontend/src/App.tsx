@@ -135,19 +135,42 @@ export const App: React.FC = () => {
     try {
       const res = await api.syncPaymentStatus(oppId);
       if (res.success && res.is_recovered) {
-        alert(`Razorpay Payment Verified!\n\nStatus: PAID (${res.recovery_status})\nAmount Recovered: ₹${res.recovered_amount.toLocaleString('en-IN')}\n\nRecoverAI has recorded the recovery outcome and updated the timeline & audit log!`);
-      } else if (res.success) {
-        alert(`Razorpay Payment Status Checked:\n\nStatus: ${res.payment_status} (${res.recovery_status})\nMessage: ${res.message}`);
-      } else {
-        alert(`Sync Failed: ${res.error_message || res.message}`);
+        const recAmt = res.recovered_amount;
+        setSelectedOpp((prev) =>
+          prev && prev.opportunity_id === oppId
+            ? {
+                ...prev,
+                is_recovered: true,
+                recovery_status: 'RECOVERED',
+                policy_status: 'RECOVERED',
+                recovered_amount: recAmt ?? prev.recovered_amount ?? prev.amount,
+              }
+            : prev
+        );
+
+        setOpportunities((prev) =>
+          prev.map((o) =>
+            o.opportunity_id === oppId
+              ? {
+                  ...o,
+                  is_recovered: true,
+                  recovery_status: 'RECOVERED',
+                  policy_status: 'RECOVERED',
+                  recovered_amount: recAmt ?? o.recovered_amount ?? o.amount,
+                }
+              : o
+          )
+        );
       }
-      const updatedTimeline = await api.getTimeline(oppId);
-      setTimeline(updatedTimeline);
-      api.getGlobalAuditEvents().then((ev) => setGlobalAuditEvents(ev)).catch(() => {});
-      const updatedOpps = await api.getOpportunities(100, 42);
-      setOpportunities(updatedOpps);
+
+      // Background secondary data refresh — non-blocking
+      Promise.allSettled([
+        api.getTimeline(oppId).then(setTimeline),
+        api.getGlobalAuditEvents().then(setGlobalAuditEvents),
+        api.getOpportunities(100, 42).then(setOpportunities),
+      ]).catch((err) => console.error('Secondary refresh error:', err));
     } catch (err: any) {
-      alert(`Payment Sync Failed: ${err.message || err}`);
+      console.error('Payment sync failed:', err);
     }
   };
 

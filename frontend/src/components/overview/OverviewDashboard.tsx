@@ -2,11 +2,10 @@ import React from 'react';
 import {
   TrendingUp,
   AlertTriangle,
-  CheckCircle2,
-  DollarSign,
   ArrowRight,
   ShieldCheck,
-  Zap
+  Zap,
+  Cpu
 } from 'lucide-react';
 import { formatINR, formatPercent } from '../../lib/utils';
 import { RecoveryOpportunity, BatchSimulationResult } from '../../lib/types';
@@ -51,104 +50,174 @@ export const OverviewDashboard: React.FC<OverviewDashboardProps> = ({
     { day: 'Day 30 (Macro)', Natural: batchResult ? batchResult.baseline_recovery_rate : 35, RecoverAI: batchResult ? batchResult.recoverai_recovery_rate : 72 }
   ];
 
+  const pipelineSteps = [
+    { name: 'DETECT', desc: 'Overdue exposure' },
+    { name: 'ESTIMATE', desc: 'Natural P(R)' },
+    { name: 'SIMULATE', desc: 'Treatment uplift' },
+    { name: 'VALUE', desc: 'Positive-EV check' },
+    { name: 'GOVERN', desc: 'Policy constraints' },
+    { name: 'EXECUTE', desc: 'Bounded action' },
+    { name: 'OBSERVE', desc: 'Razorpay webhook' },
+    { name: 'RECOVER', desc: 'Paid / settled' },
+    { name: 'STOP', desc: 'Terminal state' }
+  ];
+
   return (
     <div className="space-y-6">
-      {/* HERO SECTION — MONEY AT RISK */}
+      {/* HERO SECTION & SYSTEM STATUS */}
       <div className="spatial-card p-6 rounded-2xl relative overflow-hidden bg-gradient-to-r from-slate-900 via-[#111827] to-[#0f172a] border border-slate-800/80">
         <div className="absolute right-0 top-0 translate-x-12 -translate-y-12 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
-          <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">
-                TOTAL PORTFOLIO EXPOSURE
+        <div className="relative z-10 space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-slate-800/80">
+            <div className="flex items-center gap-2">
+              <Zap className="h-4 w-4 text-sky-400" />
+              <span className="text-xs font-mono font-bold text-slate-300 tracking-wider">
+                AI REVENUE RECOVERY COMMAND CENTER
               </span>
-              <span className="prov-badge prov-empirical">EMPIRICAL DATASET</span>
             </div>
-
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight fin-number">
-              {formatINR(totalRevenueAtRisk)}
-            </h2>
-
-            <p className="text-xs text-slate-400 mt-2 flex items-center gap-1.5">
-              <AlertTriangle className="h-3.5 w-3.5 text-amber-400" />
-              <span>Overdue receivables subject to natural recovery decline & payment default risk</span>
-            </p>
+            <div className="flex items-center gap-2">
+              <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                TEST MODE — ZERO FINANCIAL RISK
+              </span>
+              <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                API LIVE
+              </span>
+              <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 flex items-center gap-1.5">
+                <ShieldCheck className="h-3 w-3 text-indigo-400" />
+                BOUNDED AGENT
+              </span>
+            </div>
           </div>
 
-          <div className="flex flex-wrap gap-3">
-            <div className="px-4 py-3 rounded-xl bg-slate-800/60 border border-slate-700/50 text-left min-w-[140px]">
-              <div className="text-[11px] font-medium text-slate-400">PROJECTED RECOVERABLE</div>
-              <div className="text-xl font-bold text-sky-400 fin-number mt-0.5">
-                {formatINR(totalProjectedRecoverable)}
-              </div>
-              <div className="text-[10px] text-slate-500 mt-0.5">Action-conditioned EV</div>
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div className="space-y-1.5 max-w-2xl">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                Recover revenue before it becomes write-off.
+              </h2>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                RecoverAI detects overdue exposure, estimates natural recovery, selects the highest-value intervention, and executes within policy boundaries.
+              </p>
             </div>
 
-            <div className="px-4 py-3 rounded-xl bg-slate-800/60 border border-slate-700/50 text-left min-w-[140px]">
-              <div className="text-[11px] font-medium text-slate-400">SIMULATED NET GAIN</div>
-              <div className="text-xl font-bold text-emerald-400 fin-number mt-0.5">
-                {formatINR(batchResult ? batchResult.net_incremental_revenue : 0)}
+            <div className="flex items-center gap-4 bg-slate-900/90 p-3.5 rounded-xl border border-slate-800 shrink-0">
+              <div>
+                <div className="text-[10px] font-mono font-semibold text-slate-400 uppercase tracking-wider">
+                  Total Portfolio Exposure
+                </div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight fin-number">
+                  {formatINR(totalRevenueAtRisk)}
+                </div>
               </div>
-              <div className="text-[10px] text-slate-500 mt-0.5">Net of intervention costs</div>
+              <span className="prov-badge prov-empirical text-[10px]">EMPIRICAL DATASET</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* KPI METRIC CARDS */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {/* KEY PORTFOLIO METRICS (6 CARDS) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3.5">
+        <div className="spatial-card p-4 rounded-xl space-y-2">
+          <div className="flex items-center justify-between text-xs text-slate-400">
+            <span>Portfolio Exposure</span>
+            <span className="prov-badge prov-empirical">Empirical</span>
+          </div>
+          <div className="text-xl font-bold text-white fin-number">
+            {formatINR(totalRevenueAtRisk, true)}
+          </div>
+          <div className="text-[10px] text-slate-500">100 overdue invoices</div>
+        </div>
+
+        <div className="spatial-card p-4 rounded-xl space-y-2">
+          <div className="flex items-center justify-between text-xs text-slate-400">
+            <span>Active Opportunities</span>
+            <span className="prov-badge prov-empirical">Batch</span>
+          </div>
+          <div className="text-xl font-bold text-sky-400 fin-number">
+            {opportunities.length}
+          </div>
+          <div className="text-[10px] text-slate-500">Evaluating interventions</div>
+        </div>
+
+        <div className="spatial-card p-4 rounded-xl space-y-2 border-sky-500/30">
+          <div className="flex items-center justify-between text-xs text-sky-300">
+            <span>Projected Recoverable</span>
+            <span className="prov-badge prov-configured">Projected EV</span>
+          </div>
+          <div className="text-xl font-bold text-sky-400 fin-number">
+            {formatINR(totalProjectedRecoverable, true)}
+          </div>
+          <div className="text-[10px] text-slate-500">Action-conditioned EV</div>
+        </div>
+
         <div className="spatial-card p-4 rounded-xl space-y-2">
           <div className="flex items-center justify-between text-xs text-slate-400">
             <span>Natural Baseline Rate</span>
             <span className="prov-badge prov-empirical">Baseline</span>
           </div>
-          <div className="text-2xl font-bold text-slate-200 fin-number">
+          <div className="text-xl font-bold text-slate-300 fin-number">
             {formatPercent(batchResult ? batchResult.baseline_recovery_rate : 35.0)}
           </div>
-          <div className="text-[11px] text-slate-500">Unassisted 30d settlement rate</div>
+          <div className="text-[10px] text-slate-500">Unassisted 30d rate</div>
         </div>
 
         <div className="spatial-card p-4 rounded-xl space-y-2 border-indigo-500/30">
           <div className="flex items-center justify-between text-xs text-indigo-300">
             <span>RecoverAI Recovery Rate</span>
-            <span className="prov-badge prov-simulated">Simulated Policy</span>
+            <span className="prov-badge prov-simulated">Simulated</span>
           </div>
-          <div className="text-2xl font-bold text-indigo-400 fin-number">
+          <div className="text-xl font-bold text-indigo-400 fin-number">
             {formatPercent(batchResult ? batchResult.recoverai_recovery_rate : 72.0)}
           </div>
-          <div className="text-[11px] text-emerald-400 font-medium">
-            +{formatPercent(batchResult ? (batchResult.recoverai_recovery_rate - batchResult.baseline_recovery_rate) : 37.0)} incremental uplift
+          <div className="text-[10px] text-emerald-400 font-semibold">
+            +{formatPercent(batchResult ? (batchResult.recoverai_recovery_rate - batchResult.baseline_recovery_rate) : 37.0)} uplift
           </div>
         </div>
 
-        <div className="spatial-card p-4 rounded-xl space-y-2">
-          <div className="flex items-center justify-between text-xs text-slate-400">
-            <span>Total Executed Cost</span>
-            <span className="prov-badge prov-configured">Configured Costs</span>
+        <div className="spatial-card p-4 rounded-xl space-y-2 border-emerald-500/30">
+          <div className="flex items-center justify-between text-xs text-emerald-300">
+            <span>Simulated Net Gain</span>
+            <span className="prov-badge prov-simulated">Batch Simulation</span>
           </div>
-          <div className="text-2xl font-bold text-amber-400 fin-number">
-            {formatINR(batchResult ? batchResult.recoverai_intervention_cost : 0)}
+          <div className="text-xl font-bold text-emerald-400 fin-number">
+            {formatINR(batchResult ? batchResult.net_incremental_revenue : 0, true)}
           </div>
-          <div className="text-[11px] text-slate-500">Reminders + Retries + Escalations</div>
+          <div className="text-[10px] text-slate-500">Net of execution costs</div>
+        </div>
+      </div>
+
+      {/* AI DECISION PIPELINE SUMMARY */}
+      <div className="spatial-card p-5 rounded-xl space-y-4 border border-indigo-500/20 bg-slate-900/60">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <Cpu className="h-4 w-4 text-indigo-400" />
+            <h3 className="text-xs font-mono font-bold text-slate-200 uppercase tracking-wider">
+              RECOVERAI DECISION PIPELINE
+            </h3>
+          </div>
+          <span className="text-[10px] font-mono text-slate-400 bg-slate-800 px-2 py-0.5 rounded border border-slate-700">
+            AUTONOMOUS & BOUNDED AGENT FLOW
+          </span>
         </div>
 
-        <div className="spatial-card p-4 rounded-xl space-y-2">
-          <div className="flex items-center justify-between text-xs text-slate-400">
-            <span>Policy Allowed Rate</span>
-            <span className="prov-badge prov-safety">Policy Engine</span>
-          </div>
-          <div className="text-2xl font-bold text-sky-400 fin-number">
-            {formatPercent(
-              batchResult && batchResult.total_interventions_executed > 0
-                ? ((batchResult.total_interventions_executed - batchResult.blocked_interventions_count) /
-                    batchResult.total_interventions_executed) *
-                    100
-                : 94.2
-            )}
-          </div>
-          <div className="text-[11px] text-slate-500">Disputes & cooldowns enforced</div>
+        {/* 9-STEP PIPELINE STEPS */}
+        <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-9 gap-1.5">
+          {pipelineSteps.map((step, idx) => (
+            <div key={step.name} className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-indigo-500/40 text-center space-y-0.5 transition">
+              <div className="text-[10px] font-mono font-bold text-indigo-400 flex items-center justify-center gap-1">
+                <span>{step.name}</span>
+              </div>
+              <div className="text-[9px] text-slate-400 truncate">{step.desc}</div>
+            </div>
+          ))}
         </div>
+
+        <p className="text-xs text-slate-400 bg-slate-950/60 p-3 rounded-lg border border-slate-800/80 leading-relaxed">
+          <strong className="text-slate-300 font-semibold">How it works: </strong>
+          ML estimates natural recovery probability. RecoverAI evaluates intervention economics, applies deterministic policy guardrails, and executes only bounded actions.
+        </p>
       </div>
 
       {/* RECOVERY HORIZON SUMMARY & ANALYTICAL TRAJECTORY */}
@@ -236,7 +305,7 @@ export const OverviewDashboard: React.FC<OverviewDashboardProps> = ({
                 Natural Baseline P(R | X, A=0) vs RecoverAI Bounded Policy Execution
               </p>
             </div>
-            <span className="prov-badge prov-simulated">Simulated Trajectory</span>
+            <span className="prov-badge prov-simulated">BATCH SIMULATION</span>
           </div>
 
           <div className="h-48 w-full">
@@ -266,7 +335,7 @@ export const OverviewDashboard: React.FC<OverviewDashboardProps> = ({
         </div>
       </div>
 
-      {/* QUICK RECOVERY QUEUE — HIGHEST VALUE ACTIVE OPPORTUNITIES */}
+      {/* PRIORITY RECOVERY QUEUE */}
       <div className="spatial-card p-5 rounded-xl space-y-4">
         <div className="flex items-center justify-between">
           <div>
